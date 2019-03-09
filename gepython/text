@@ -1,0 +1,21 @@
+import os
+import sys
+
+
+def READ(in):
+    return in
+
+def EVAL(in):
+    return in
+
+def PRINT(in):
+    return in
+
+def rep():
+
+
+def main():
+    with open(sys.argv[1],'rt') as f:
+        print("user~>")
+        for line in f:
+            print(line)
