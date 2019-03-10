@@ -2,7 +2,7 @@ import os , sys, readline as pyreadline
 history_file = os.path.expanduser("~/.mal-history")
 history_loaded = False
 
-def readline(promote="user>"):
+def readline(prompt="user> "):
     global history_loaded
     #检验history是否载入，若没有，先载入
     if not history_loaded:
@@ -17,7 +17,7 @@ def readline(promote="user>"):
             pass
     #读用户输入行
     try :
-        line = input(promote)
+        line = input(prompt)
         pyreadline.add_history(line)
 
         with open(history_file,'a') as f:
